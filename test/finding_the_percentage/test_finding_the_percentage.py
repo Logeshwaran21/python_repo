@@ -1,5 +1,7 @@
 import unittest
+import logging
 from python_repo.src.finding_the_percentage import util
+logging.basicConfig(level=logging.DEBUG, format="%(message)s" )
 
 class MyTestCase(unittest.TestCase):
     def Test_case_1(self):
@@ -13,6 +15,7 @@ class MyTestCase(unittest.TestCase):
         expected_average = 56.0
         # Calculate average using the function
         calculated_average = util.calculate_average(student_marks, query_name)
+        logging.debug(f"The average of {query_name} is {expected_average:.2f}")
         # Assert that the calculated average matches the expected average
         self.assertEqual(calculated_average, expected_average)
     def Test_case_2(self):
@@ -27,6 +30,8 @@ class MyTestCase(unittest.TestCase):
         expected_average = 33.0
         # Calculate average using the function
         calculated_average = util.calculate_average(student_marks, query_name)
+        logging.debug(f"The average of {query_name} is {expected_average:.2f}")
+
         # Assert that the calculated average matches the expected average
         self.assertEqual(calculated_average, expected_average)
     def Test_case_3(self):
