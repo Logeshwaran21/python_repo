@@ -1,3 +1,6 @@
+import logging
+logging.basicConfig(level=logging.DEBUG, format="%(message)s" )
+
 def read_student_marks():
     n = int(input("Enter the number of students? "))
     student_marks = {}
@@ -10,4 +13,5 @@ def read_student_marks():
 def calculate_average(student_marks, query_name):
     # Calculate average score for the queried student
     average_score = sum(student_marks[query_name]) / len(student_marks[query_name])
+    logging.basicConfig(level=logging.DEBUG, format="%(message)s")
     return average_score
