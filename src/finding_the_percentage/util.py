@@ -11,7 +11,6 @@ def read_student_marks():
     return student_marks
 
 def calculate_average(student_marks, query_name):
-    # Calculate average score for the queried student
     average_score = sum(student_marks[query_name]) / len(student_marks[query_name])
-    logging.basicConfig(level=logging.DEBUG, format="%(message)s")
     return average_score
+    logging.info(f"The average of {query_name} is {average_score:.2f}")
