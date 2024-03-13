@@ -1,12 +1,12 @@
 import logging
 logging.basicConfig(level=logging.DEBUG, format="%(message)s")
-def second_maximum():
-    n = int(input("Enter no. of values to be inserted: "))
-    arr = list(map(int, input("Enter the values: ").split()))
-    for i in range(len(arr)):
-        for j in range(i + 1, len(arr)):
-            if arr[i] > arr[j]:
-                arr[i], arr[j] = arr[j], arr[i]
-    return arr[-2]
+def second_maximum(n,List):
 
+    for i in range(len(List)):
+        for j in range(i + 1, len(List)):
+            if List[i] > List[j]:
+                List[i], List[j] = List[j], List[i]
+    second_max=List[-2]
+    logging.debug(f"The second largest value is {second_max}")
+    return second_max
 
