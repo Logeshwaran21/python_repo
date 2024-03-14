@@ -1,8 +1,8 @@
 import logging
 
-logging.basicConfig(level=logging.DEBUG, format="%(message)s:%(asctime)s")
-def word_order():
-    n = int(input("Enter the length of the words: "))
+logging.basicConfig(level=logging.DEBUG, format="%(message)s")
+def word_order(n):
+
     word=[]
     count=[]
     for i in range(n):
