@@ -6,5 +6,5 @@ def floor_ceil_rint():
     float_list=[float(i) for i in float_in.split()]
     my_array=numpy.array([float_list])
     logging.debug(f"Floor,{numpy.floor(my_array)[0]}")
-    logging.debug(f"Ceil,{numpy.floor(my_array)[0]}")
-    logging.debug(f"Rint,{numpy.floor(my_array)[0]}")
+    logging.debug(f"Ceil,{numpy.ceil(my_array)[0]}")
+    logging.debug(f"Rint,{numpy.rint(my_array)[0]}")
