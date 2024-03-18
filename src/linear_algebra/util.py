@@ -1,5 +1,6 @@
 import numpy as np
-
+import logging
+logging.basicConfig(level=logging.DEBUG,format="%(message)s" )
 
 def linear_algebra(matrix):
     # Convert the list of lists into a NumPy array
@@ -12,11 +13,11 @@ def linear_algebra(matrix):
     determinant = round(determinant, 2)
 
     # Return the determinant
+
     return determinant
 
 
 def main():
-    # Read the size of the square matrix
     n = int(input("Enter the size of the square matrix: "))
 
     # Read the elements of the square matrix
@@ -27,9 +28,7 @@ def main():
 
     # Call the function to calculate determinant
     determinant = linear_algebra(matrix)
-
     # Print the determinant
-    print("Determinant:", determinant)
-
+    logging.debug(f"Determinant:{determinant}")
 
 
