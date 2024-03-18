@@ -1,6 +1,9 @@
 import logging
 logging.basicConfig(level=logging.DEBUG, format="%(message)s" )
-def merge_tools(string_input,k):
+def merge_tools():
+    string_input = input("Enter the string value: ")
+    k = int(input("Enter the factor value: "))
+
     n= len(string_input)
     res=""
     for i in range(0,n,k):
